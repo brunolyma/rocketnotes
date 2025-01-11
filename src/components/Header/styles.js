@@ -14,6 +14,4 @@ export const Container = styled.header`
   justify-content: space-between;
 
   padding: 0 80px;
-
-  background-color: red;
 `;
