@@ -1,7 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
+Button.propTypes = {
+  title: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
+};
 export function Button({ title, loading = false, ...rest }) {
   return (
     <Container type="button" disabled={loading} {...rest}>
@@ -9,8 +13,3 @@ export function Button({ title, loading = false, ...rest }) {
     </Container>
   );
 }
-
-Button.propTypes = {
-  title: PropTypes.string.isRequired,
-  loading: PropTypes.bool.isRequired,
-};
