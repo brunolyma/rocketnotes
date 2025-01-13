@@ -4,7 +4,7 @@ import { Container } from "./styles";
 
 Button.propTypes = {
   title: PropTypes.string.isRequired,
-  loading: PropTypes.bool.isRequired,
+  loading: PropTypes.bool,
 };
 export function Button({ title, loading = false, ...rest }) {
   return (
