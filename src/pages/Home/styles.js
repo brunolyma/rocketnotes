@@ -13,31 +13,59 @@ export const Container = styled.div`
     "menu content"
     "newnote content";
 
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 `;
 
 export const Brand = styled.div`
   grid-area: brand;
-  background: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+  > h1 {
+    font-size: 24px;
+    color: ${({ theme }) => theme.COLORS.ORANGE};
+  }
 `;
 
 export const Menu = styled.ul`
   grid-area: menu;
-  background: green;
+
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  text-align: center;
+  padding-top: 24px;
+
+  > li {
+    margin-bottom: 24px;
+  }
 `;
 
 export const Search = styled.div`
   grid-area: search;
-  background: violet;
+  padding: 64px 64px 0;
 `;
 
 export const Content = styled.div`
   grid-area: content;
-  background: blue;
 `;
 
 export const NewNote = styled.button`
   grid-area: newnote;
-  background: yellow;
+
+  background-color: ${({ theme }) => theme.COLORS.ORANGE};
   border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-right: 8px;
+  }
 `;
