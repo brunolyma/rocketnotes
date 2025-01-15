@@ -12,5 +12,5 @@ export function Input({ icon: Icon, ...rest }) {
 }
 
 Input.propTypes = {
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.func.isRequired,
 };

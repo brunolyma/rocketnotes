@@ -18,6 +18,27 @@ export default createGlobalStyle`
         font-family: "Roboto Slab", serif;
         font-size: 16px;
         outline: none;
+
+        /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+}
     }
 
     a {

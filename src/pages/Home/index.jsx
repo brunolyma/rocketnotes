@@ -6,6 +6,8 @@ import {
 import { ButtonText } from '../../components/ButtonText';
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
+import { Note } from '../../components/Note';
+import { Section } from '../../components/Section';
 import {
   Brand,
   Container,
@@ -35,10 +37,25 @@ export function Home() {
           <ButtonText title="NodeJS" />
         </li>
       </Menu>
+
       <Search>
         <Input placeholder="Pesquisar pelo titulo" icon={FiSearch} />
       </Search>
-      <Content></Content>
+
+      <Content>
+        <Section title="Minhas Notas">
+          <Note
+            data={{
+              title: "React",
+              tags: [
+                { id: 1, name: "react" },
+                { id: 2, name: "rocketseat" },
+              ],
+            }}
+          />
+        </Section>
+      </Content>
+
       <NewNote>
         <FiPlus />
         Criar Nota
