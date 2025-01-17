@@ -1,17 +1,17 @@
-import { StrictMode } from 'react';
+import { StrictMode } from "react";
 
-import { createRoot } from 'react-dom/client';
-import { ThemeProvider } from 'styled-components';
+import { createRoot } from "react-dom/client";
+import { ThemeProvider } from "styled-components";
 
-import { Home } from './pages/Home';
-import GlobalStyle from './styles/global';
-import theme from './styles/theme';
+import { SignUp } from "./pages/SignUp";
+import GlobalStyle from "./styles/global";
+import theme from "./styles/theme";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Home />
+      <SignUp />
     </ThemeProvider>
   </StrictMode>
 );
