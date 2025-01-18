@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 export function Section({ title, children }) {
   return (
@@ -13,5 +13,5 @@ export function Section({ title, children }) {
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.object,
+  children: PropTypes.array,
 };
