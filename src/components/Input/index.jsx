@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 export function Input({ icon: Icon, ...rest }) {
   return (
@@ -12,5 +12,5 @@ export function Input({ icon: Icon, ...rest }) {
 }
 
 Input.propTypes = {
-  icon: PropTypes.func.isRequired,
+  icon: PropTypes.func,
 };
