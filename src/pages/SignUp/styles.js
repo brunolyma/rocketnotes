@@ -6,6 +6,7 @@ export const Container = styled.div`
   height: 100vh;
 
   display: flex;
+  flex-direction: row-reverse;
   align-items: stretch;
 `;
 
@@ -26,7 +27,7 @@ export const Form = styled.form`
 
   > h2 {
     font-size: 24px;
-    margin-block: 84px 24px;
+    margin-block: 48px;
   }
 
   > p {
