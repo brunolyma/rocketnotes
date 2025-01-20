@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
@@ -15,7 +17,7 @@ export function NewNote() {
         <Form>
           <header>
             <h1>Create note</h1>
-            <a href="/">Return</a>
+            <Link to="/">Return</Link>
           </header>
 
           <Input placeholder="Title" />

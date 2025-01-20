@@ -1,4 +1,5 @@
 import { FiArrowLeft, FiCamera, FiLock, FiMail, FiUser } from "react-icons/fi";
+import { Link } from "react-router";
 
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
@@ -8,9 +9,9 @@ export function Profile() {
   return (
     <Container>
       <header>
-        <a href="/">
+        <Link to="/">
           <FiArrowLeft />
-        </a>
+        </Link>
       </header>
 
       <Form>
@@ -28,7 +29,7 @@ export function Profile() {
         <Input placeholder="Current password" type="text" icon={FiLock} />
         <Input placeholder="New password" type="text" icon={FiLock} />
 
-        <Button />
+        <Button title="Save" />
       </Form>
     </Container>
   );
