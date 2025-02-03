@@ -1,11 +1,24 @@
-import { FiLock, FiMail } from "react-icons/fi";
-import { Link } from "react-router";
+import { useContext } from 'react';
 
-import { Button } from "../../components/Button";
-import { Input } from "../../components/Input";
-import { Background, Container, Form } from "./styles";
+import {
+  FiLock,
+  FiMail,
+} from 'react-icons/fi';
+import { Link } from 'react-router';
+
+import { Button } from '../../components/Button';
+import { Input } from '../../components/Input';
+import { MyContext } from '../../myContext';
+import {
+  Background,
+  Container,
+  Form,
+} from './styles';
 
 export function SignIn() {
+  const data = useContext(MyContext);
+  console.log("MY CONTEXT => ", data);
+
   return (
     <Container>
       <Form>
