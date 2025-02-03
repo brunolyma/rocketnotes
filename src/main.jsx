@@ -3,7 +3,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
 
-import { MyContext } from './myContext';
+import { AuthProvider } from './hooks/auth';
 import { Routes } from './routes';
 import GlobalStyle from './styles/global';
 import theme from './styles/theme';
@@ -12,9 +12,9 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <MyContext.Provider value={{ email: "bruno@email.com" }}>
+      <AuthProvider>
         <Routes />
-      </MyContext.Provider>
+      </AuthProvider>
     </ThemeProvider>
   </StrictMode>
 );
