@@ -1,12 +1,8 @@
-import {
-  createContext,
-  useContext,
-  useState,
-} from 'react';
+import { createContext, useContext, useState } from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import { api } from '../services/api';
+import { api } from "../services/api";
 
 export const AuthContext = createContext({});
 
@@ -17,9 +13,8 @@ function AuthProvider({ children }) {
       const response = await api.post("/sessions", { email, password });
       const { user, token } = response.data;
 
-      setData(user, token);
-
       api.defaults.headers.authorization = `Bearer ${token}`;
+      setData(user, token);
     } catch (error) {
       if (error.response) {
         alert(error.response.data.message);
