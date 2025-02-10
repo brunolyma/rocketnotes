@@ -61,6 +61,9 @@ export const Avatar = styled.div`
     cursor: pointer;
   }
 
+  input#avatar {
+    opacity: 0;
+  }
   svg {
     width: 20px;
     height: 20px;
