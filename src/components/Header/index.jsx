@@ -1,9 +1,13 @@
-import { RiShutDownLine } from "react-icons/ri";
+import { RiShutDownLine } from 'react-icons/ri';
 
-import avatarPlaceholder from "../../assets/profile_avatar_placeholder.webp";
-import { useAuth } from "../../hooks/auth";
-import { api } from "../../services/api";
-import { Container, Logout, Profile } from "./styles";
+import avatarPlaceholder from '../../assets/profile_avatar_placeholder.webp';
+import { useAuth } from '../../hooks/auth';
+import { api } from '../../services/api';
+import {
+  Container,
+  Logout,
+  Profile,
+} from './styles';
 
 export function Header() {
   const { signOut, user } = useAuth();
@@ -16,7 +20,7 @@ export function Header() {
       <Profile to="/profile">
         <img src={avatarUrl} alt={user.name} />
         <div>
-          <span>Bem-vindo</span>
+          <span>Welcome</span>
           <strong>{user.name}</strong>
         </div>
       </Profile>

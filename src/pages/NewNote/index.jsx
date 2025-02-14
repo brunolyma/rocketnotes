@@ -1,15 +1,21 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { Link, useNavigate } from "react-router";
+import {
+  Link,
+  useNavigate,
+} from 'react-router';
 
-import { Button } from "../../components/Button";
-import { Header } from "../../components/Header";
-import { Input } from "../../components/Input";
-import { NoteItem } from "../../components/NoteItem";
-import { Section } from "../../components/Section";
-import { Textarea } from "../../components/Textarea";
-import { api } from "../../services/api";
-import { Container, Form } from "./styles";
+import { Button } from '../../components/Button';
+import { Header } from '../../components/Header';
+import { Input } from '../../components/Input';
+import { NoteItem } from '../../components/NoteItem';
+import { Section } from '../../components/Section';
+import { Textarea } from '../../components/Textarea';
+import { api } from '../../services/api';
+import {
+  Container,
+  Form,
+} from './styles';
 
 export function NewNote() {
   const [title, setTitle] = useState("");
@@ -42,6 +48,22 @@ export function NewNote() {
   }
 
   async function handleNewNote() {
+    if (!title) {
+      return alert("Write a title for your note");
+    }
+
+    if (newLink) {
+      return alert(
+        "You left a link to be add. Click in add or leave the input blank."
+      );
+    }
+
+    if (newTag) {
+      return alert(
+        "You left a tag to be add. Click in add or leave the input blank"
+      );
+    }
+
     await api.post("/notes", {
       title,
       description,
